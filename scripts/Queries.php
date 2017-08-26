@@ -29,7 +29,7 @@
 
 	// Projects with the given status that the user is enrolled in
 	function GetUserProjects($conn, $userID, $projectStatus){
-		$query = "SELECT p.ID FROM Project p, Users u, Enroll e WHERE e.UserID = $userID AND e.ProjectID = p.ID AND e.UserID = u.UserID AND p.Status = $projectStatus";
+		$query = "SELECT p.ID FROM Project p, Users u, Enroll e WHERE e.UserID = $userID AND e.ProjectID = p.ID AND e.UserID = u.ID AND p.Status = $projectStatus";
 
 		$result = $conn->query($query);
 		return $result;
@@ -90,7 +90,7 @@
 
 	// Projects owned by a given user
 	function GetOwnedProjects($conn, $userID){
-		$query = "SELECT p.ID FROM Project p, Users u WHERE p.OwnerUser = $userID";
+		$query = "SELECT p.ID FROM Project p, Users u WHERE p.OwnerUser = 1 AND p.OwnerUser = u.ID;";
 
 		$results = $conn->query($query);
 		return $results;

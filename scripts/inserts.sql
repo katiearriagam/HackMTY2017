@@ -1,28 +1,31 @@
-INSERT INTO Usuario VALUES(
+INSERT INTO Users VALUES(
 	NULL,
 	"Gerardo Galvez",
 	"gerardo@galvez.com",
 	"www.linkedin/in/galvez",
 	"www.github.com/gerardogalvez",
-	NULL
+	'http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg',
+	"gerardogalvez"
 );
 
-INSERT INTO Usuario VALUES(
+INSERT INTO Users VALUES(
 	NULL,
 	"Pedro Gomez",
 	"Pedro@Gomez.com",
 	"www.linkedin/in/gomez",
 	"www.github.com/pedrogomez",
-	NULL
+	'http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg',
+	"pedrogomez"
 );
 
-INSERT INTO Usuario VALUES(
+INSERT INTO Users VALUES(
 	NULL,
 	"Juan Perez",
 	"juan@perez.com",
 	"www.linkedin/in/perez",
 	"www.github.com/juanperez",
-	NULL
+	'http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg',
+	"juanperez"
 );
 
 INSERT INTO Project VALUES(

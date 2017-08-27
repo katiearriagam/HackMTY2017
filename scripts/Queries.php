@@ -98,7 +98,7 @@
 
 	// Projects owned by a given user
 	function GetOwnedProjects($conn, $userID){
-		$query = "SELECT p.ID FROM Project p, Users u WHERE p.OwnerUser = $userID AND p.OwnerUser = u.ID;";
+		$query = "SELECT p.ID FROM Project p WHERE p.OwnerUser = $userID";
 
 		$results = $conn->query($query);
 		return $results;

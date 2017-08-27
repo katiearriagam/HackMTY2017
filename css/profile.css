@@ -139,6 +139,10 @@
 	padding: 2%;
 }
 
+#user_role_list{
+	margin-top: 20px;
+}
+
 .cf:before,
 .cf:after {
     content: " "; /* 1 */

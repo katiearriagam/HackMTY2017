@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>User Profile</title>
+	<script type="text/javascript" src="scripts/jquery.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/profile.css">
+	<script type="text/javascript" src="scripts/loadUserInfo.js"></script>
+</head>
+<body>
+	<div class"cf">
+		<div class="about">
+			<h1 id="user_name" class="user_name"></h1>
+			<img id="user_photo" class="profile_photo">
+			<h2 id="user_rating" class="user_rating"></h2>
+
+			<h2 id="user_role_header" class="role_header">Roles</h2>
+			<ul id="user_role_list">
+			</ul>
+
+			<h2 id="user_skill_header" class="skill_header">Skills</h2>
+			<ul id="user_skill_list">
+			</ul>
+
+			<h3 id="user_social_header" class="social_header">External</h3>
+			<a id="user_linkedin" class="usersocial" target="_blank">
+				<img id="user_linkedin_img" class="usersocial_img" src="http://wwwf.imperial.ac.uk/utils/assets/apps/news/img/icon-linkedin.png">
+			</a>
+
+			<a id="user_github" class="usersocial" target="_blank">
+				<img id="user_github_img" class="usersocial_img" src="https://assets-cdn.github.com/favicon.ico">
+			</a>
+		</div>
+		<div class="main">
+			<div class="connect_with">
+				<button id="message_user" type="button" class="btn btn-primary float-right">Message</button>
+			</div>
+			<div class="projects">
+				<h3 id="current_projects" class="projects_h3">Current Projects</h3>
+				<ul id="current_projects_list" class="projects-list">
+				</ul>
+				<h3 id="previous_projects" class="projects_h3">Previous Projects</h3>
+				<ul id="previous_projects_list" class="projects-list">
+				</ul>
+				<h3 id="upcoming_projects" class="projects_h3">Upcoming Projects</h3>
+				<ul id="upcoming_projects_list" class="projects-list">
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

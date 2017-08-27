@@ -37,7 +37,7 @@ INSERT INTO Project VALUES(
 	"Aplicacion iOS",
 	"Descripcion proyecto",
 	"Descripcion",
-	NULL,
+	"https://i.ytimg.com/vi/5UWZFcSHdTw/maxresdefault.jpg",
 	1
 );
 
@@ -47,7 +47,7 @@ INSERT INTO Project VALUES(
 	"Aplicacion Android",
 	"Descripcion proyecto",
 	"Descripcion",
-	NULL,
+	"https://i.ytimg.com/vi/5UWZFcSHdTw/maxresdefault.jpg",
 	2
 );
 

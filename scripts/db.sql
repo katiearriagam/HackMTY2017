@@ -10,6 +10,7 @@ CREATE TABLE Users(
 	Github VARCHAR(256),
 	Photo VARCHAR(100),
 	Username VARCHAR(30) UNIQUE NOT NULL,
+	Rating FLOAT,
 	PRIMARY KEY (ID)
 );
 

@@ -5,7 +5,8 @@ INSERT INTO Users VALUES(
 	"www.linkedin/in/galvez",
 	"www.github.com/gerardogalvez",
 	'http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg',
-	"gerardogalvez"
+	"gerardogalvez",
+	1
 );
 
 INSERT INTO Users VALUES(
@@ -15,7 +16,8 @@ INSERT INTO Users VALUES(
 	"www.linkedin/in/gomez",
 	"www.github.com/pedrogomez",
 	'http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg',
-	"pedrogomez"
+	"pedrogomez",
+	2.5
 );
 
 INSERT INTO Users VALUES(
@@ -25,7 +27,8 @@ INSERT INTO Users VALUES(
 	"www.linkedin/in/perez",
 	"www.github.com/juanperez",
 	'http://www.apimages.com/Images/Ap_Creative_Stock_Header.jpg',
-	"juanperez"
+	"juanperez",
+	4.5
 );
 
 INSERT INTO Project VALUES(

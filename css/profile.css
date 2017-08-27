@@ -13,9 +13,11 @@
 	padding-bottom: 50%; 
 }
 
-#user_name{
+#user_name, #project_name{
 	text-align: center;
 }
+
+
 
 .main{
 	width:70%;
@@ -62,8 +64,31 @@
 	color: #5e5e5e;
 }
 
-#message_user{
+#project_description, #enrolled_members, #project_skills{
+	margin-top: 2%;
+	color: #5e5e5e;
+}
+
+.enrolled-members{
+	margin: 0 auto;
+	line-height: 300%;
+	padding: 5px;
+	width: 100%;
+}
+
+p{
+	color: black;
+	text-align: justify;
+	line-height: 2;
+}
+
+#message_user, #join_project{
 	display: inline-block;
+	width: 15%;
+}
+
+#join_project{
+	margin-left: 67%;
 }
 
 .card{
@@ -72,6 +97,28 @@
 .profile_photo{
 	width:100%;
 	padding: 10%;
+	display: block;
+	border-radius: 50%;
+	display: inline-block;
+    vertical-align: middle;
+    display:table-cell;
+}
+
+#project-owner-photo{
+	width:60%;
+	padding: 0%;
+	border-radius: 50%;
+    vertical-align: middle;
+    display:block;
+    margin-right: 18%;
+    margin-bottom: 5%;
+    float: right;
+}
+
+.container{
+	width:100%;
+	margin: 0 auto;
+	padding: 0%;
 	display: block;
 	border-radius: 50%;
 	float:left;
@@ -84,7 +131,6 @@
 	width: 18%;
 	margin: 0 auto;
 	position: relative;
-	margin: 0 auto;
 	float: left;
 }
 
@@ -128,15 +174,33 @@
 	height: 10px;
 }
 
-#user_role_list li{
+.member {
+	border-radius: 50%;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	margin: 15px;
+}
+
+#user_role_list li, #project-status{
 	list-style-type: none;
-	color: aqua;
-	border: 1.5px solid aqua;
+	color: white;
+	border: 1.5px solid white;
 	border-radius: 25px;
 	text-align: center;
-	margin: 5px;
+	margin: 10px;
 	display: inline;
 	padding: 2%;
+}
+
+#project-status{
+	display: block;
+	width: 100%;
+	margin: 5%;
+	line-height: 400%;
+	background-color: #61BB46;
+	border: 1.5px #61BB46;
+	border-radius: 50px;
 }
 
 #user_role_list{
@@ -144,6 +208,27 @@
 	line-height: 300%;
 	padding: 5px;
 	width: 100%;
+}
+
+#project-skills-list li{
+	list-style-type: none;
+	color: black;
+	border: 1.5px solid black;
+	border-radius: 30px;
+	text-align: center;
+	margin: 10px;
+	display: inline;
+	padding: 2%;
+	position: relative;
+	vertical-align: 10px;
+}
+
+#project-skills-list {
+	margin: 0 auto;
+	line-height: 400%;
+	padding: 5px;
+	width: 100%;
+	white-space: wrap;
 }
 
 .cf:before,
@@ -170,11 +255,11 @@
 #user_github_img{
 	float: right;
 }
-ul.role-icons{
+ul.role-icons, ul.enrolled-members{
 	margin: 0;
 	padding: 0;
 }
-.role-icons li{
+.role-icons li, .enrolled-members li{
 	display: inline-block;
 }
 .u-fl{

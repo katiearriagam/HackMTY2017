@@ -10,7 +10,8 @@
 		$query = "SELECT u.ID FROM Users u WHERE u.username = $username";
 
 		$result = $conn->query($query);
-		return $result;
+		$row = $result->fetch_assoc();
+		return $row['ID'];
 	}
 
 	function GetUserSkills($conn, $userID){
@@ -30,6 +31,13 @@
 	// Projects with the given status that the user is enrolled in
 	function GetUserProjects($conn, $userID, $projectStatus){
 		$query = "SELECT p.ID FROM Project p, Users u, Enroll e WHERE e.UserID = $userID AND e.ProjectID = p.ID AND e.UserID = u.ID AND p.Status = $projectStatus";
+
+		$result = $conn->query($query);
+		return $result;
+	}
+
+	function GetUserProjects($conn, $projectStatus){
+		$query = "SELECT p.ID FROM Project p WHERE p.Status = $projectStatus";
 
 		$result = $conn->query($query);
 		return $result;
@@ -90,7 +98,7 @@
 
 	// Projects owned by a given user
 	function GetOwnedProjects($conn, $userID){
-		$query = "SELECT p.ID FROM Project p, Users u WHERE p.OwnerUser = 1 AND p.OwnerUser = u.ID;";
+		$query = "SELECT p.ID FROM Project p, Users u WHERE p.OwnerUser = $userID AND p.OwnerUser = u.ID;";
 
 		$results = $conn->query($query);
 		return $results;
@@ -147,6 +155,29 @@
 		else{
 			return "Join";
 		}
-
 	}
+
+	function SearchUsers($conn, $role, $skill){
+		$roleFilter = !($role == null || $role == "");
+		$skillFilter = !($skill == null || $skill == "");
+
+		if (!$roleFilter && !$skillFilter){
+			$query = "SELECT u.ID FROM Users u";
+		}
+		else{
+			if (!$roleFilter && $skillFilter){
+				$query = "SELECT u.ID FROM Users u, UserSkill us, Skill s WHERE us.userID = u.ID AND us.SkillID = s.ID AND s.Name = $skill";
+			}
+			else if ($roleFilter && !$skillFilter){
+				$query = "SELECT u.ID FROM Users u, UserRole ur, Role r WHERE ur.userID = u.ID AND ur.RoleID = r.ID AND r.Name = $role";
+			}
+			else{
+				$query = "SELECT DISTINCT u.ID FROM Users u, UserRole ur, Role r, UserSkill us, Skill s WHERE (ur.userID = u.ID AND ur.RoleID = r.ID AND r.Name = $role) OR (us.userID = u.ID AND us.SkillID = s.ID AND s.Name = $skill)";
+			}
+		}
+
+		$results = $conn->query($query);
+		return $results;
+	}
+
 ?>
